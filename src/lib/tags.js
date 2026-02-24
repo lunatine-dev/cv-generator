@@ -58,8 +58,7 @@ export const keywords = [
     "Vue",
     "Angular",
     "Responsive design",
-    "UI",
-    "UX",
+    "UI/UX",
     "Redux",
     "SASS",
     "SCSS",
@@ -111,6 +110,11 @@ export const keywords = [
     "Agile",
     "Svelte",
     "SvelteKit",
+    "Tailwind",
+    "Frontend",
+    "Backend",
+    "Fullstack",
+    "Performance",
 ];
 
 export function highlight(text) {

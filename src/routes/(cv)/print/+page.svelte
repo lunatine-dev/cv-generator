@@ -89,9 +89,12 @@
                 </div>
             {/each}
         </div>
-        <div class="education mt-5" style={type === "general" ? "" : "page-break-before: always;break-before: page;"}>
+        <div
+            class="education mt-5 mb-2"
+            style={type === "general" ? "" : "page-break-before: always;break-before: page;"}
+        >
             <Title type="newLine" text="Education" classes="text-lg font-semibold uppercase" />
-            <div class="mb-2 pl-2">
+            <div class="mb-3 pl-2">
                 {#each data.education as education}
                     <div class="mb-2">
                         <div class="flex items-center justify-between text-gray-700 text-sm gap-2 mb-1">
@@ -109,5 +112,21 @@
                 {/each}
             </div>
         </div>
+        {#if data.highlights}
+            {#if type !== "general"}
+                <Title
+                    text={`${type.charAt(0).toUpperCase()}${type.slice(1)} Highlights`}
+                    type="newLine"
+                    classes="text-lg font-semibold uppercase"
+                />
+                <div class="pl-3">
+                    <ul class="list-disc list-outside ml-8">
+                        {#each data.highlights as highlightText}
+                            <li>{@html highlight(highlightText)}</li>
+                        {/each}
+                    </ul>
+                </div>
+            {/if}
+        {/if}
     {/if}
 </div>
