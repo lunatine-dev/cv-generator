@@ -64,14 +64,6 @@
 
 {#if jsonData}
     <div class="w-full">
-        <h2 class="text-center text-lg font-semibold mt-6">
-            Preview: {selectedCV.toUpperCase()} CV
-        </h2>
-        <pre class="max-w-4xl mx-auto mt-2 p-4 bg-gray-600 rounded overflow-x-auto">{JSON.stringify(
-                jsonData,
-                null,
-                2,
-            )}</pre>
         <div
             class="max-w-xs mx-auto mt-2 p-4 bg-blue-700 hover:bg-blue-600 rounded overflow-x-auto text-center cursor-pointer"
             onclick={printAsPDF}
