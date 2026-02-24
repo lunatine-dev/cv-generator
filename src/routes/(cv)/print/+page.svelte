@@ -58,7 +58,11 @@
                     <span class="font-semibold">{project.name}</span>
                     <span class="flex items-center justify-items-start text-gray-700">{project.type}</span>
 
-                    <span class="flex">{project.description}</span>
+                    <ul class="list-disc list-outside ml-8">
+                        {#each project.roles as role}
+                            <li>{@html highlight(role)}</li>
+                        {/each}
+                    </ul>
                 {/each}
             </div>
         {/if}
