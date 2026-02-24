@@ -56,7 +56,9 @@
             <div class="mb-2 pl-2">
                 {#each data.projects as project}
                     <span class="font-semibold">{project.name}</span>
-                    <span class="flex items-center justify-items-start text-gray-700">{project.type}</span>
+                    <span class="flex items-center justify-items-start text-gray-700"
+                        >{@html highlight(project.type)}</span
+                    >
 
                     <ul class="list-disc list-outside ml-8">
                         {#each project.roles as role}
@@ -69,7 +71,7 @@
         <Title type="newLine" text="Work Experience" classes="text-lg font-semibold uppercase" />
         <div class="mb-2 pl-2">
             {#each data.experience as experience}
-                <div class="mb-2">
+                <div class="mb-3">
                     <div class="flex items-center justify-between text-gray-700 text-sm gap-2">
                         <span class="font-semibold">{experience.title} </span>
 
