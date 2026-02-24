@@ -1,0 +1,16 @@
+@page {
+    size: A4;
+    margin: 0;
+}
+
+body {
+    width: 210mm; /* A4 width */
+    min-height: 297mm; /* A4 height */
+    margin: 0 auto;
+    padding: 20mm; /* same as page margin */
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    color: #222;
+
+    border: 1px dotted lightgray;
+}

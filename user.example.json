@@ -1,0 +1,55 @@
+{
+    "name": "John Doe",
+    "address": "Texas, United States",
+    "email": "johndoe@example.com",
+    "role": "Web Developer",
+    "website": "johndoe.com",
+    "phone": "+123-456-7890",
+    "summary": "Lorem ipsum nodejs NodeJS node.js NODEJS dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "experience": [
+        {
+            "name": "Wardiere Inc",
+            "title": "Web Developer",
+            "start": "04 Feburary, 2029",
+            "end": false,
+            "roles": [
+                "Ensure user satisfaction and retention by providing responsive tech support.",
+                "Build and maintain software documentation sites using various programming languages.",
+                "Increase productivity by using software to organize, track bug patches and add feature requests.",
+                "Collaborate with other developers to update the website and create new features."
+            ]
+        },
+        {
+            "name": "Paucek and Lage",
+            "title": "Junior Web Developer",
+            "start": "05 October, 2026",
+            "end": "20 December, 2028",
+            "roles": [
+                "Built and maintained websites for clients through various online platforms",
+                "Assisted troubleshooting software.",
+                "Created and tested applications for websites.",
+                "Filed reports, gathered information, and performed research."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "name": "College",
+            "description": "Level 3",
+            "qualifications": ["Level 3", "Level 3 extended"],
+            "start": "2022",
+            "end": "2026"
+        }
+    ],
+    "hardskills": ["NodeJS", "Python"],
+    "softskills": ["Teamworking", "Reliable"],
+    "projects": [
+        {
+            "name": "Warner & Spencer",
+            "type": "Web App",
+            "roles": [
+                "comet is a lightweight Node.js server that listens to GitHub webhooks and automatically pulls & restarts your services when the main branch updates."
+            ]
+        }
+    ]
+}

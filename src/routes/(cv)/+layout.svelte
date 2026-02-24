@@ -1,6 +1,5 @@
 <script>
-    import "./layout.css";
-
+    import "./printStyle.css";
     let { children } = $props();
 </script>
 
