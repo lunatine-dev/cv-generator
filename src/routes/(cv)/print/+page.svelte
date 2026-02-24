@@ -66,13 +66,12 @@
         <div class="mb-2 pl-2">
             {#each data.experience as experience}
                 <div class="mb-2">
-                    <span class="font-semibold">{experience.name}</span>
+                    <div class="flex items-center justify-between text-gray-700 text-sm gap-2">
+                        <span class="font-semibold">{experience.title} </span>
 
-                    <div class="flex items-center justify-items-start text-gray-700 text-sm gap-2">
-                        <span>{experience.title}</span>
-                        <span>|</span>
-                        <span>{experience.start} - {experience.end || "Present"}</span>
+                        <span> {experience.start} - {experience.end || "Present"}</span>
                     </div>
+                    <span>{experience.name}</span>
 
                     {#if experience?.roles?.length}
                         <ul class="list-disc list-outside ml-8">
@@ -84,25 +83,25 @@
                 </div>
             {/each}
         </div>
-        <Title type="newLine" text="Education" classes="text-lg font-semibold uppercase" />
-        <div class="mb-2 pl-2">
-            {#each data.education as education}
-                <div class="mb-2">
-                    <span class="font-semibold">{education.name}</span>
+        <div class="education mt-5" style={type === "general" ? "" : "page-break-before: always;break-before: page;"}>
+            <Title type="newLine" text="Education" classes="text-lg font-semibold uppercase" />
+            <div class="mb-2 pl-2">
+                {#each data.education as education}
+                    <div class="mb-2">
+                        <div class="flex items-center justify-between text-gray-700 text-sm gap-2 mb-1">
+                            <span><span class="font-bold">{education.name}</span> | {education.description}</span>
 
-                    <div class="flex items-center justify-items-start text-gray-700 text-sm gap-2">
-                        <span>{education.description}</span>
-                        <span>|</span>
-                        <span>{education.start} - {education.end || "Present"}</span>
+                            <span>{education.start} - {education.end || "Present"}</span>
+                        </div>
+
+                        <ul class="list-disc list-outside ml-8">
+                            {#each education.qualifications as qual}
+                                <li>{@html highlight(qual)}</li>
+                            {/each}
+                        </ul>
                     </div>
-
-                    <ul class="list-disc list-outside ml-8">
-                        {#each education.qualifications as qual}
-                            <li>{@html highlight(qual)}</li>
-                        {/each}
-                    </ul>
-                </div>
-            {/each}
+                {/each}
+            </div>
         </div>
     {/if}
 </div>
