@@ -18,7 +18,7 @@
 
 <div class="text-sm">
     {#if Object.keys(data).length}
-        <div class="mb-3">
+        <div class="mb-2">
             <Title type="sameLine" text={data.name} classes="text-2xl font-bold" />
             <div class="flex">
                 {#if data?.role}
@@ -34,40 +34,36 @@
             </div>
         </div>
         <Title type="newLine" text="Career Summary" classes="text-lg font-semibold uppercase" />
-        <div class="mb-3">
-            {@html highlight(data.summary, keywords[type])}
+        <div class="mb-2 pl-2">
+            {@html highlight(data.summary)}
         </div>
         <Title type="newLine" text="Skills" classes="text-lg font-semibold uppercase" />
-        <div class="mb-3">
-            <ul class="list-disc list-outside ml-8">
+        <div class="mb-2 pl-2">
+            <ul class="list-disc list-outside ml-8 columns-3 gap-4">
                 {#if data?.type === "general"}
                     {#each data.softskills as skill}
-                        <li>{@html highlight(skill, keywords[type])}</li>
+                        <li>{@html highlight(skill)}</li>
                     {/each}
                 {:else}
                     {#each data.hardskills as skill}
-                        <li>{@html highlight(skill, keywords[type])}</li>
+                        <li>{@html highlight(skill)}</li>
                     {/each}
                 {/if}
             </ul>
         </div>
         {#if data?.projects}
             <Title type="newLine" text="Projects" classes="text-lg font-semibold uppercase" />
-            <div class="mb-3">
+            <div class="mb-2 pl-2">
                 {#each data.projects as project}
                     <span class="font-semibold">{project.name}</span>
                     <span class="flex items-center justify-items-start text-gray-700">{project.type}</span>
 
-                    <ul class="list-disc list-outside ml-8">
-                        {#each project.roles as role}
-                            <li>{@html highlight(role, keywords[type])}</li>
-                        {/each}
-                    </ul>
+                    <span class="flex">{project.description}</span>
                 {/each}
             </div>
         {/if}
         <Title type="newLine" text="Work Experience" classes="text-lg font-semibold uppercase" />
-        <div class="mb-3">
+        <div class="mb-2 pl-2">
             {#each data.experience as experience}
                 <div class="mb-2">
                     <span class="font-semibold">{experience.name}</span>
@@ -81,7 +77,7 @@
                     {#if experience?.roles?.length}
                         <ul class="list-disc list-outside ml-8">
                             {#each experience.roles as role}
-                                <li>{@html highlight(role, keywords[type])}</li>
+                                <li>{@html highlight(role)}</li>
                             {/each}
                         </ul>
                     {/if}
@@ -89,7 +85,7 @@
             {/each}
         </div>
         <Title type="newLine" text="Education" classes="text-lg font-semibold uppercase" />
-        <div class="mb-3">
+        <div class="mb-2 pl-2">
             {#each data.education as education}
                 <div class="mb-2">
                     <span class="font-semibold">{education.name}</span>
@@ -102,7 +98,7 @@
 
                     <ul class="list-disc list-outside ml-8">
                         {#each education.qualifications as qual}
-                            <li>{@html highlight(qual, keywords[type])}</li>
+                            <li>{@html highlight(qual)}</li>
                         {/each}
                     </ul>
                 </div>
