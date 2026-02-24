@@ -31,6 +31,8 @@
                 <span>{data.phone}</span>
                 <span>|</span>
                 <span>{data.email}</span>
+                <span>|</span>
+                <span>{data.website}</span>
             </div>
         </div>
         <Title type="newLine" text="Career Summary" classes="text-lg font-semibold uppercase" />
