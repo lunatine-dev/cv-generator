@@ -57,7 +57,7 @@
             <Title type="newLine" text="Projects" classes="text-lg font-semibold uppercase" />
             <div class="mb-2 pl-2">
                 {#each data.projects as project}
-                    <span class="font-semibold">{project.name}</span>
+                    <span class="font-semibold text-gray-700">{project.name}</span>
                     <span class="flex items-center justify-items-start text-gray-700"
                         >{@html highlight(project.type)}</span
                     >
