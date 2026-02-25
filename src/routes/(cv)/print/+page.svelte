@@ -91,9 +91,10 @@
                 </div>
             {/each}
         </div>
+
         <div
-            class="education mt-5 mb-2"
-            style={type === "general" ? "" : "page-break-before: always;break-before: page;"}
+            class="education mb-2"
+            style={type === "general" ? "" : "page-break-before: always;break-before: page;padding-top:20mm;"}
         >
             <Title type="newLine" text="Education" classes="text-lg font-semibold uppercase" />
             <div class="mb-3 pl-2">

@@ -1,16 +1,23 @@
 @page {
     size: A4;
     margin: 0;
-}
 
+    /* footer on every page */
+    @top-right {
+        content: "Page " counter(page) " of 2";
+        font-family: monospace;
+        font-size: 10pt;
+        margin-right: 15mm;
+    }
+}
 body {
     width: 210mm; /* A4 width */
     min-height: 297mm; /* A4 height */
     margin: 0 auto;
-    padding: 20mm; /* same as page margin */
+    padding: 20mm 15mm 15mm 15mm;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     color: #222;
 
-    border: 1px dotted lightgray;
+    /*border: 1px dotted lightgray;*/
 }
