@@ -115,6 +115,9 @@ export const keywords = [
     "Backend",
     "Fullstack",
     "Performance",
+    "Networking",
+    "Operating systems",
+    "Technical support",
 ];
 
 export function highlight(text) {
