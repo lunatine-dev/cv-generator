@@ -45,20 +45,22 @@
         <div class="mb-2 pl-2">
             {@html highlight(data.summary)}
         </div>
-        <Title type="newLine" text="Skills" classes="text-lg font-semibold uppercase" />
-        <div class="mb-2 pl-2">
-            <ul class="list-disc list-outside ml-8 columns-3 gap-4">
-                {#if data?.type === "general"}
-                    {#each data.softskills as skill}
-                        <li>{@html highlight(skill)}</li>
-                    {/each}
-                {:else}
-                    {#each data.hardskills as skill}
-                        <li>{@html highlight(skill)}</li>
-                    {/each}
-                {/if}
-            </ul>
-        </div>
+        {#if data?.softskills?.length || data?.hardskills?.length}
+            <Title type="newLine" text="Skills" classes="text-lg font-semibold uppercase" />
+            <div class="mb-2 pl-2">
+                <ul class="list-disc list-outside ml-8 columns-3 gap-4">
+                    {#if type === "general"}
+                        {#each data.softskills as skill}
+                            <li>{@html highlight(skill)}</li>
+                        {/each}
+                    {:else}
+                        {#each data.hardskills as skill}
+                            <li>{@html highlight(skill)}</li>
+                        {/each}
+                    {/if}
+                </ul>
+            </div>
+        {/if}
         {#if data?.projects}
             <Title type="newLine" text="Projects" classes="text-lg font-semibold uppercase" />
             <div class="mb-2 pl-2">
