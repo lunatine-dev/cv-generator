@@ -27,12 +27,18 @@
             </div>
             <div class="flex items-center justify-between text-gray-700 text-sm gap-2">
                 <span>{data.address}</span>
-                <span>|</span>
-                <span>{data.phone}</span>
-                <span>|</span>
-                <span>{data.email}</span>
-                <span>|</span>
-                <span>{data.website}</span>
+                {#if data.phone}
+                    <span>|</span>
+                    <span>{data.phone}</span>
+                {/if}
+                {#if data.email}
+                    <span>|</span>
+                    <span>{data.email}</span>
+                {/if}
+                {#if data.website}
+                    <span>|</span>
+                    <span>{data.website}</span>
+                {/if}
             </div>
         </div>
         <Title type="newLine" text="Career Summary" classes="text-lg font-semibold uppercase" />
