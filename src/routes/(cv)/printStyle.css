@@ -4,7 +4,7 @@
 
     /* footer on every page */
     @top-right {
-        content: "Page " counter(page) " of 2";
+        content: "Page " counter(page);
         font-family: monospace;
         font-size: 10pt;
         margin-right: 15mm;
